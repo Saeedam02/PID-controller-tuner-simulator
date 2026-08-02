@@ -1,0 +1,55 @@
+<svg viewBox="0 0 900 320" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#1f2937"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="320" fill="#ffffff"/>
+
+  <!-- Setpoint input -->
+  <text x="20" y="100" font-size="16" fill="#1f2937">Setpoint</text>
+  <text x="15" y="118" font-size="13" fill="#6b7280">r(t)</text>
+  <line x1="95" y1="95" x2="150" y2="95" stroke="#1f2937" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Summing junction -->
+  <circle cx="170" cy="95" r="20" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="163" y="101" font-size="18" fill="#1f2937">+</text>
+  <line x1="170" y1="140" x2="170" y2="115" stroke="#1f2937" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="178" y="135" font-size="16" fill="#1f2937">−</text>
+
+  <!-- error label -->
+  <line x1="190" y1="95" x2="245" y2="95" stroke="#1f2937" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="195" y="80" font-size="13" fill="#6b7280">e(t)</text>
+
+  <!-- PID Controller box -->
+  <rect x="245" y="55" width="180" height="80" rx="8" fill="#eef2ff" stroke="#4338ca" stroke-width="2"/>
+  <text x="335" y="90" font-size="16" fill="#1f2937" text-anchor="middle">PID Controller</text>
+  <text x="335" y="112" font-size="13" fill="#4338ca" text-anchor="middle">Kp · e + Ki ∫e + Kd de/dt</text>
+
+  <!-- control effort -->
+  <line x1="425" y1="95" x2="480" y2="95" stroke="#1f2937" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="430" y="80" font-size="13" fill="#6b7280">u(t)</text>
+
+  <!-- Plant box -->
+  <rect x="480" y="55" width="180" height="80" rx="8" fill="#ecfdf5" stroke="#047857" stroke-width="2"/>
+  <text x="570" y="90" font-size="16" fill="#1f2937" text-anchor="middle">Plant</text>
+  <text x="570" y="112" font-size="13" fill="#047857" text-anchor="middle">Motor / Thermal / Pendulum</text>
+
+  <!-- disturbance arrow into plant -->
+  <line x1="570" y1="10" x2="570" y2="55" stroke="#b91c1c" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+  <text x="580" y="25" font-size="13" fill="#b91c1c">disturbance d(t)</text>
+
+  <!-- output -->
+  <line x1="660" y1="95" x2="740" y2="95" stroke="#1f2937" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="750" y="100" font-size="16" fill="#1f2937">Output y(t)</text>
+
+  <!-- feedback path -->
+  <line x1="770" y1="95" x2="770" y2="230" stroke="#1f2937" stroke-width="2"/>
+  <line x1="770" y1="230" x2="170" y2="230" stroke="#1f2937" stroke-width="2"/>
+  <line x1="170" y1="230" x2="170" y2="115" stroke="#1f2937" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="420" y="250" font-size="13" fill="#6b7280" text-anchor="middle">feedback measurement</text>
+
+  <!-- caption -->
+  <text x="450" y="300" font-size="13" fill="#9ca3af" text-anchor="middle">Closed-loop PID control system — as implemented in controller.py, plants.py, and simulation.py</text>
+</svg>
