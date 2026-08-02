@@ -2,9 +2,6 @@
 
 ![PID closed-loop diagram](diagram.svg)
 
-![Demo](Animation.gif)
-*Live PID tuning in action — adjusting Kp/Ki/Kd and watching the step response, control effort, and P/I/D breakdown update in real time.*
-
 An interactive Streamlit app for tuning a PID controller against simulated
 physical systems, with live plots of the step response, control effort,
 and individual P/I/D contributions.
