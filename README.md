@@ -1,4 +1,9 @@
-# PID Controller Tuner & Simulator
+<h1 align="center">PID Controller Tuner & Simulator</h1>
+
+![PID closed-loop diagram](diagram.svg)
+
+![Demo](Animation.gif)
+*Live PID tuning in action — adjusting Kp/Ki/Kd and watching the step response, control effort, and P/I/D breakdown update in real time.*
 
 An interactive Streamlit app for tuning a PID controller against simulated
 physical systems, with live plots of the step response, control effort,
@@ -64,6 +69,8 @@ pid-tuner-simulator/
 ├── simulation.py       # Closed-loop simulation runner
 ├── metrics.py           # Step-response performance metrics
 ├── tuning.py             # Ziegler-Nichols open-loop auto-tuner
+├── diagram.svg            # Closed-loop block diagram
+├── Animation.gif           # Demo recording
 └── requirements.txt
 ```
 
