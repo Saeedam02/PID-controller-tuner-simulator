@@ -1,2 +1,4 @@
-streamlit>=1.32
+# Runtime dependencies for the Streamlit application.
+# For development (tests/lint/format), prefer: pip install -e ".[dev]"
 pandas>=2.0
+streamlit>=1.32
