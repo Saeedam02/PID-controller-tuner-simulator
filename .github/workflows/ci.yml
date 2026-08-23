@@ -12,6 +12,7 @@ jobs:
   test:
     name: Python ${{ matrix.python-version }}
     runs-on: ubuntu-latest
+
     strategy:
       fail-fast: false
       matrix:
@@ -19,10 +20,10 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.python-version }}
           cache: pip
@@ -39,7 +40,12 @@ jobs:
         run: black --check .
 
       - name: Run tests with branch coverage
-        run: pytest --cov=pid_tuner --cov-branch --cov-report=term-missing --cov-report=xml
+        run: |
+          pytest \
+            --cov=pid_tuner \
+            --cov-branch \
+            --cov-report=term-missing \
+            --cov-report=xml
 
       - name: Upload coverage XML
         if: matrix.python-version == '3.13'
