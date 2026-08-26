@@ -1,6 +1,5 @@
 # PID Controller Tuner & Simulator
 
-[![CI](https://github.com/Saeedam02/PID-controller-tuner-simulator/actions/workflows/ci.yml/badge.svg)](https://github.com/Saeedam02/PID-controller-tuner-simulator/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
